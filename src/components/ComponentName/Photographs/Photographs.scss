@@ -8,6 +8,7 @@
     border: 1px solid $sea-green-color;
     background-color: $pistachio-color;
     border-radius: 0.5rem;
+    font-weight: 700;
   
     @include tablet {
       width: 45%;
@@ -23,6 +24,13 @@
   
     &__container {
       position: relative;
+      
+
+      @include desktop{
+        
+      
+      }
+      
     }
   
     &__photographer {
@@ -33,15 +41,13 @@
       bottom: 0;
       right: 0;
       background-color: $pistachio-color;
-      // font-weight: 900;
-      // font-family: "Outfit";
+      
     }
   
     &__tag {
       background-color: $white-color;
       padding: 0.5rem 0.5rem;
       border-radius: 0.75rem;
-      font-weight: 900;
       color: $black-color;
       font-size: 0.75rem;
       align-items: center;

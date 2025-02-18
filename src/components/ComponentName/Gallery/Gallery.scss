@@ -10,17 +10,13 @@
     padding-bottom: 4rem;
     flex-wrap: wrap;
   
-    @include tablet {
-      justify-content: space-around;
-    }
-  
     @include desktop {
       margin-right: 0%;
   
       &.gallery--filtered {
         margin-right: 28%;
-        }
-    }
+      }
+    }  
   }
 
 

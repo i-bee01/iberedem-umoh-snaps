@@ -43,6 +43,11 @@ background-color: $white-color;
     &--active{
     background-color: $forest-green-color;
     color: $white-color;
+    
+    @include desktop{
+        width: 20
+    }
+    
     }
 }
 }
