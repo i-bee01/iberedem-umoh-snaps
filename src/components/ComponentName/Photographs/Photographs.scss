@@ -1,4 +1,147 @@
 @use "../../../styles/partials/global.scss" as *;
 @use "../../../styles/partials/mixins.scss" as *;
 @use "../../../styles/partials/typography" as *;
-// @use "../../../styles/partials/variables.scss" as *;
+@use "../../../styles/partials/variables.scss" as *;
+
+
+.photograph {
+    border: 1px solid $sea-green-color;
+    background-color: $pistachio-color;
+    border-radius: 0.5rem;
+  
+    @include tablet {
+      width: 45%;
+  
+      @include desktop {
+        width: 30vw;
+  
+        .gallery--filtered & {
+          width: 48%;
+        }
+      }
+    }
+  
+    &__image-container {
+      position: relative;
+    }
+  
+    &__photographer {
+      border-top-left-radius: 0.75rem;
+      color: $black-color;
+      padding: 0.5rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $sage-color;
+      font-weight: 900;
+      font-family: "Outfit";
+    }
+  
+    &__tag {
+      background-color: $white-color;
+      padding: 0.5rem 0.5rem;
+      border-radius: 0.75rem;
+      font-weight: 900;
+      color: $black-color;
+      font-size: 0.75rem;
+      align-items: center;
+      border: 0.125rem solid $sea-green-color;
+      font-family: "Outfit";
+    }
+  
+    &__tag-list {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  
+    &__image {
+      width: 100%;
+      border-top-right-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

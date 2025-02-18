@@ -12,7 +12,6 @@ const FilterButton = ({ tags, selectedFilters, onFilterToggle}) => {
                 <button key={tag} 
                 onClick={() => onFilterToggle(tag)} 
                 className={`filter__button ${selectedFilters.has(tag) && "filter__button--active"}`}
-            
             >
                 {tag}
             </button>

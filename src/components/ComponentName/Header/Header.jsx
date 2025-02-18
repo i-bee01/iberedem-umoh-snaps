@@ -1,6 +1,7 @@
 import {useState} from "react";
 import "./Header.scss";
-// import FilterButton from "../FilterButton.jsx";
+import FilterButton from "../FilterButton/FilterButton.jsx";
+import tagsData from "../../../data/tags.json";
 
 const Header = ({
     selectedFilters,

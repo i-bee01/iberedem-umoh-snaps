@@ -1,5 +1,55 @@
 @use "../../../styles/partials/global.scss" as *;
 @use "../../../styles/partials/mixins.scss" as *;
 @use "../../../styles/partials/typography" as *;
-// @use "../../../styles/partials/variables.scss" as *;
+@use "../../../styles/partials/variables.scss" as *;
 
+.header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      
+        &__filter {
+          display: flex;
+          justify-content: flex-end;
+        }
+      
+        &__button {
+          border-radius: 3.125rem;
+          border: 0.1875rem solid $forest-green-color;
+          display: flex;
+          align-items: center;
+          background: transparent;
+          justify-content: space-evenly;
+          color: $forest-green-color;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          font-weight: 700;
+          cursor: pointer;
+      
+          &:hover {
+            background-color: $forest-green-color;
+            color: $white-color;
+      
+            .header__button--image {
+              filter: brightness(0) invert(1);
+            }
+          }
+      
+          &--active {
+            background-color: $forest-green-color;
+            color: $white-color;
+      
+            &:hover {
+              background-color: $forest-green-color;
+            }
+          }
+      
+          &--image {
+            width: 1.3rem;
+          }
+        }
+      }

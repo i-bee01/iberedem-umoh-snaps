@@ -2,6 +2,7 @@ import "./Photographs.scss";
 
 
 
+
 const Photographs = ({photo}) =>{
     return(
         <div className="snaps">
@@ -10,7 +11,7 @@ const Photographs = ({photo}) =>{
                 <p className="snaps__photographer">{photo.photographer}</p>
             </div>
             <div className="snaps__tag-list">
-                {photo.tag.map((tag, index)=>(
+                {photo.tags.map((tag, index)=>(
                  <p key={index} className= "snaps__tag">{tag}</p> 
                 )
             )}

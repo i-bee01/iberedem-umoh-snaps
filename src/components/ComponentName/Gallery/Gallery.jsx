@@ -1,6 +1,6 @@
 import './Gallery.scss';
-// import Photographs from '../Photographs';
-// import photoData from "../../data/photos.json";
+import Photographs from '../Photographs/Photographs.jsx';
+import photoData from "../../../data/photos.json";
 
 const Gallery = ({selectedFilters, isFilterOpen}) =>{
 let filteredPhotos = photoData;
@@ -14,7 +14,7 @@ if (selectedFilters.size > 0) {
 return(
     <div className={`gallery ${isFilterOpen ? "gallery--filtered": ""}`}>
         {filteredPhotos.map((photo, index) =>(
-            <Photograph key={index} photo={photo}/>
+            <Photographs key={index} photo={photo}/>
         ))}
     </div>
      );

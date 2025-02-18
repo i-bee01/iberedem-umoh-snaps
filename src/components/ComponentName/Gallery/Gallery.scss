@@ -2,3 +2,105 @@
 @use "../../../styles/partials/mixins.scss" as *;
 @use "../../../styles/partials/typography" as *;
 @use "../../../styles/partials/variables.scss" as *;
+
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 4rem;
+    flex-wrap: wrap;
+  
+    @include tablet {
+      justify-content: space-around;
+    }
+  
+    @include desktop {
+      margin-right: 0%;
+  
+      &.gallery--filtered {
+        margin-right: 28%;
+        }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
