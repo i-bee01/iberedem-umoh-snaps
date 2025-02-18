@@ -9,25 +9,24 @@ import tagData from './data/tags.json';
 
 
 function App() {
-
-
-
-
+  
  const [selectedFilters, setSelectedFilters] = useState(new Set());
  const [isFilterOpen, setIsFilterOpen] = useState("");
 
- const toggleFilter = (tag) => {
+const toggleFilter = (tag) => {
   const newFilters = new Set();
-  newFilters.add(tag);
+  if (!selectedFilters.has(tag)) {
+    newFilters.add(tag);
+  }
   setSelectedFilters(newFilters);
- }
+};
 
- const handleFilterButtonClick = () => {
+const handleFilterButtonClick = () => {
   if (isFilterOpen) {
     setSelectedFilters(new Set());
   }
   setIsFilterOpen(!isFilterOpen);
- };
+};
 
   return (
     <div className="app">
