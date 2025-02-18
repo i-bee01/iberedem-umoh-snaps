@@ -6,7 +6,8 @@ const FilterButton = ({ tags, selectedFilters, onFilterToggle}) => {
             <div>
                 <h2 className="filter__header">Filters</h2>
             </div>
-        
+
+                    
         <div className="filter__tags">
             {tags.map((tag) =>(
                 <button key={tag} 

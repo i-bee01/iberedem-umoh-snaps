@@ -1,8 +1,5 @@
 import "./Photographs.scss";
 
-
-
-
 const Photographs = ({photo}) =>{
     return(
         <div className="snaps">

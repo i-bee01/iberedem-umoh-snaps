@@ -11,8 +11,15 @@
 
 &__header{
  padding-bottom: 1rem;
- font-weight: 900;
- font-family: "Outfit";
+ font-size: 1.125rem;
+ line-height: 1.4375rem;
+ font-weight: 500;
+
+ @include tablet{
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 500;
+ }
 }
 
 &__tags{
@@ -23,10 +30,14 @@ gap: 0.6rem;
 
 &__button{
 padding:0.5rem 1rem;
-border-radius:0;
-border:0;
+border-radius: 0.75rem;
+border: .0938rem solid $forest-green-color;
 color:$forest-green-color;
-font-weight: 600;
+font-family: "Outfit", "Newsreader";
+font-size:0.75rem;
+line-height: 0.9375rem;
+font-weight: 500;
+
 background-color: $white-color;
 
     &--active{

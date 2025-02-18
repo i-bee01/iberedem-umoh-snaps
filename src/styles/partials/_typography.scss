@@ -1,36 +1,40 @@
 @font-face {
     font-family: "Newsreader";
-    src: url("../../assets/fonts/newsreader-light.woff") format("woff"),
-     url("../../assets/fonts/alternative/newsreader-light.woff2") format("woff2");
+    src: url("./assets/fonts/newsreader-light.woff") format("woff"),
+     url("./assets/fonts/alternative/newsreader-light.woff2") format("woff2");
     font-weight:300;
+    font-style: normal;
 }
 
 @font-face{
     font-family: "Newsreader";
-    src: url("../../assets/fonts/newsreader-lightItalic.woff") format("woff"),
-    url("../../assets/fonts/alternative/newsreader-lightitalic.woff2") format("woff2");
+    src: url("./assets/fonts/newsreader-lightItalic.woff") format("woff"),
+    url("./assets/fonts/alternative/newsreader-lightitalic.woff2") format("woff2");
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face{
     font-family: "Newsreader";
-    src: url("../../assets/fonts/newsreader-regular.woff") format("woff"),
-    url("../../assets/fonts/alternative/newsreader-regular.woff2") format("woff2");
+    src: url("./assets/fonts/newsreader-regular.woff") format("woff"),
+    url("./assets/fonts/alternative/newsreader-regular.woff2") format("woff2");
     font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Outfit";
-    src: url("../../assets/fonts/outfit-light.woff") format("woff"),
-    url("../../assets/fonts/alternative/outfit-light.woff2") format("woff2");
+    src: url("./assets/fonts/outfit-light.woff") format("woff"),
+    url("./assets/fonts/alternative/outfit-light.woff2") format("woff2");
     font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Outfit";
-    src: url("../../assets/fonts/outfit-medium.woff") format("woff"),
-    url("../../assets/fonts/alternative/outfit-medium.woff2") format("woff2");
+    src: url("./assets/fonts/outfit-medium.woff") format("woff"),
+    url("./assets/fonts/alternative/outfit-medium.woff2") format("woff2");
     font-weight: 500;
+    font-style: normal;
 }
 
