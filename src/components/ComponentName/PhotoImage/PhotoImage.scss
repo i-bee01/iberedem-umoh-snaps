@@ -3,4 +3,73 @@
 @use "../../../styles/partials/typography" as *;
 @use "../../../styles/partials/variables.scss" as *;
 
-.photo-image{}
+.photo-image{
+    border: 1px solid $sea-green-color;
+    background-color: $sage-color;
+    border-radius: 0.5rem;
+
+    &__image{
+        width: 100%;
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+    }
+
+    &__tag{
+        background-color: $white-color;
+        border: 0.125rem solid $sea-green-color;
+        border-radius: 0.75rem;
+        padding: 0.5rem 1rem;
+        font-weight: 900;
+        font-size: 0.75rem;
+        color: $black-color;
+        font-family: "Outfit";
+        align-items: center;
+
+        &-text{
+            text-decoration: none;
+            display: inline-block;      
+        }
+    }
+
+    &__tag-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: flex-start;        
+    }
+
+    &__info{
+        position: relative;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;       
+    }
+
+    &__likeTime-container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &__likes{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 900;
+        color: $black-color;
+        font-family: "Outfit";
+    }
+
+    &__author{
+        font-family: "Outfit";
+        font-weight: 600;
+
+        @include tablet{
+            position:absolute;
+            bottom: 1rem;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
