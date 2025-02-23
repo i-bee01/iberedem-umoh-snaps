@@ -16,3 +16,5 @@ const PhotoHeader = () => {
         </header>
     );
 }
+
+export default PhotoHeader;
