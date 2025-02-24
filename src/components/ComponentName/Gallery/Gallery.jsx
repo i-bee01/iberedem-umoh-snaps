@@ -1,23 +1,31 @@
-import './Gallery.scss';
-import Photographs from '../Photographs/Photographs.jsx';
-import photoData from "../../../data/photos.json";
+import "./Gallery.scss";
+import Photograph from "../Photographs/Photographs.jsx";
+import { Link } from "react-router-dom";
 
-const Gallery = ({selectedFilters, isFilterOpen}) =>{
-let filteredPhotos = photoData;
+const Gallery = ({ selectedFilters, isFilterOpen, photos }) => {
+  let filteredPhotos = photos;
 
-if (selectedFilters.size > 0) {
-    filteredPhotos = photoData.filter((photo) =>
-        photo.tags.some((tag) => selectedFilters.has(tag))
-);
-}
+  if (selectedFilters.size > 0) {
+    filteredPhotos = photos.filter((photo) =>
+      photo.tags.some((tag) => selectedFilters.has(tag))
+    );
+  }
 
-return(
-    <div className={`gallery ${isFilterOpen ? "gallery--filtered": ""}`}>
-        {filteredPhotos.map((photo, index) =>(
-            <Photographs key={index} photo={photo}/>
-        ))}
+  return (
+    <div className={`gallery ${isFilterOpen ? "gallery--filtered" : ""}`}>
+      {filteredPhotos.map((photo, index) => (
+        <Link
+          className={`gallery__photo-link ${
+            isFilterOpen ? "gallery__photo-link--filtered" : ""
+          }`}
+          to={`/photos/${photo.id}`}
+          key={photo.id}
+        >
+          <Photograph key={index} photo={photo} />
+        </Link>
+      ))}
     </div>
-     );
-    }
+  );
+};
 
 export default Gallery;

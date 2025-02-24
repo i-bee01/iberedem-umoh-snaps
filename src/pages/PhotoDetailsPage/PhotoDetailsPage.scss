@@ -1,0 +1,13 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/typography.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.photo-details {
+    &__content {
+      @include desktop {
+        padding-left: 28%;
+        padding-right: 28%;
+      }
+    }
+  }
