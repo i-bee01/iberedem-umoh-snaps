@@ -12,6 +12,8 @@
   
     @include tablet {
       width: 45%;
+      
+    }
   
       @include desktop {
         width: 30vw;
@@ -20,14 +22,18 @@
           width: 48%;
         }
       }
-    }
+    
   
     &__container {
       position: relative;
       
 
-      @include desktop{
-        
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flexwrap:wrap;
+        width: 21.65rem;
       
       }
       
