@@ -33,7 +33,7 @@
         justify-content: space-between;
         flex-direction: row;
         flexwrap:wrap;
-        width: 21.65rem;
+        width: 100%;
       
       }
       
@@ -59,6 +59,8 @@
       align-items: center;
       border: .0625rem solid $sea-green-color;
       font-family: "Outfit";
+      text-decoration: none;
+      
     }
   
     &__tag-list {
@@ -67,6 +69,8 @@
       padding: 0.5rem;
       flex-wrap: wrap;
       justify-content: flex-start;
+      text-decoration: none;
+      
     }
   
     &__image {
