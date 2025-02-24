@@ -1,75 +1,85 @@
 @use "../../../styles/partials/global.scss" as *;
 @use "../../../styles/partials/mixins.scss" as *;
-@use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/typography.scss" as *;
 @use "../../../styles/partials/variables.scss" as *;
 
-.photo-image{
-    border: 1px solid $sea-green-color;
-    background-color: $sage-color;
+.photo-image {
+  border: 1px solid $sea-green-color;
+  background-color: $sage-color;
+  border-radius: 0.5rem;
+
+  &__image {
+    width: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+  }
+
+  &__tag {
+    background-color: $white-color;
+    border: 0.125rem solid $sea-green-color;
     border-radius: 0.5rem;
+    padding: 0rem 0.5rem;
+    font-weight: 900;
+    font-size: 0.75rem;
+    color: $black-color;
+    font-family: "Newsreader";
+    align-items: center;
 
-    &__image{
-        width: 100%;
-        border-top-right-radius: 0.5rem;
-        border-top-left-radius: 0.5rem;
+    &-text {
+      text-decoration: none;
+      display: inline-block;
     }
+  }
 
-    &__tag{
-        background-color: $white-color;
-        border: 0.125rem solid $sea-green-color;
-        border-radius: 0.75rem;
-        padding: .25rem 1rem;
-        font-weight: 900;
-        font-size: 0.75rem;
-        color: $black-color;
-        font-family: "Outfit";
-        align-items: center;
+  &__tag-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
 
-        &-text{
-            text-decoration: none;
-            display: inline-block;      
-        }
+  &__info {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__LikesDate {
+    padding: 0.875rem 0 0.25rem 0;
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: $black-color;
+    font-family: "Outfit";
+  }
+
+  &__date {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: $black-color;
+  }
+
+  &__author {
+    font-family: "Outfit";
+    font-weight: 600;
+
+    @include tablet {
+      position: absolute;
+      bottom: 1rem;
+      text-align: center;
+      width: 100%;
     }
-
-    &__tag-list{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: flex-start;        
-    }
-
-    &__info{
-        position: relative;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;       
-    }
-
-    &__container{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
-    &__likes{
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.75rem;
-        font-weight: 900;
-        color: $black-color;
-        font-family: "Outfit";
-    }
-
-    &__author{
-        font-family: "Outfit";
-        font-weight: 600;
-
-        @include tablet{
-            position:absolute;
-            bottom: 1rem;
-            text-align: center;
-            width: 100%;
-        }
-    }
+  }
 }

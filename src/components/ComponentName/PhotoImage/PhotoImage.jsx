@@ -17,7 +17,7 @@ const PhotoImage = ({ photo }) => {
                     </p>                    
                     ))}
                 </div>
-                <div className="photo-image__info">
+                <div className="photo-image__LikesDate">
                     <div className="photo-image__container">
                         <div className="photo-image__likes">
                         <svg width="15" height="14" viewBox="0 0 15 14">

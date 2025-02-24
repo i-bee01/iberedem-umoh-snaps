@@ -4,6 +4,7 @@
 @use "../../../styles/partials/variables.scss" as *;
 
 .comment {
+  
     &__chat {
       padding-top: 2rem;
     }
@@ -15,6 +16,7 @@
     &__input-container {
       display: flex;
       flex-direction: column;
+      font-family:"Newsreader";
     }
   
     &__input-name {
@@ -22,7 +24,7 @@
       height: 30px;
       border-radius: 0.75rem;
       padding: 0.5rem 0.5rem;
-      border: $sage-color 0.0625rem solid;
+      border: $sea-green-color .125rem solid;
     }
   
     &__input-comment {
@@ -30,12 +32,13 @@
       height: 4.5rem;
       border-radius: 0.75rem;
       padding: 0.5rem 0.5rem;
-      border: $sage-color 0.0625rem solid;
+      border: $sea-green-color 0.125rem solid;
     }
   
     &__label {
       padding-bottom: 0.5rem;
       padding-top: 1rem;
+      font-weight: 600;      
     }
   
     &__user-comments {
@@ -86,7 +89,7 @@
       cursor: pointer;
   
       &:hover {
-        background-color: #00695c;
+        background-color: $forest-green-color;
       }
     }
   }

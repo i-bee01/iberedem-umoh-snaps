@@ -1,16 +1,39 @@
+import React, { useState } from "react";
 import "./CommentSection.scss";
 
-const CommentSection = ({ comments, newComment, setNewComment, handleFormSubmit }) => {
+const CommentSection = ({
+  comments,
+  newComment,
+  setNewComment,
+  handleFormSubmit,
+}) => {
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!newComment.name || !newComment.comment) {
+      const errorMessage = "Please submit both your name and a comment before posting!";
+      setError(errorMessage);
+      window.alert(errorMessage); // Display alert popup
+      return;
+    }
+    setError("");
+    handleFormSubmit(e);
+  };
+
   return (
     <div className="comment__chat">
-      <form className="comment__form" onSubmit={handleFormSubmit}>
+      <form className="comment__form" onSubmit={handleSubmit}>
+        {error && <div className="comment__error">{error}</div>}
         <div className="comment__input-container">
           <label className="comment__label">Name</label>
           <input
             type="text"
             className="comment__input-name"
             value={newComment.name}
-            onChange={(e) => setNewComment({ ...newComment, name: e.target.value })}
+            onChange={(e) =>
+              setNewComment({ ...newComment, name: e.target.value })
+            }
           />
         </div>
 
@@ -19,7 +42,9 @@ const CommentSection = ({ comments, newComment, setNewComment, handleFormSubmit 
           <textarea
             className="comment__input-comment"
             value={newComment.comment}
-            onChange={(e) => setNewComment({ ...newComment, comment: e.target.value })}
+            onChange={(e) =>
+              setNewComment({ ...newComment, comment: e.target.value })
+            }
           />
         </div>
 
