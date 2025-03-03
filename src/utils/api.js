@@ -42,7 +42,7 @@ const fetchComments = async (id) => {
   try {
     
     const response = await axios.get(
-      `${apiUrl}/photos/${id}/comments`
+      `${apiUrl}/comments/${id}`
     );
     return response.data;
   } catch (error) {
@@ -54,7 +54,7 @@ const postComment = async (id, comment) => {
   try {
     
     const response = await axios.post(
-      `${apiUrl}/photos/${id}/comments`,
+      `${apiUrl}/comments/${id}`,
       { name: comment.name, comment: comment.comment }
     );
     return response.data;
