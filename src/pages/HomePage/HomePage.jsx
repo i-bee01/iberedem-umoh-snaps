@@ -13,6 +13,8 @@ function HomePage() {
   const [error, setError] = useState(null);
   const [photos, setPhotos] = useState([]);
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
   useEffect(() => {
     const loadTags = async () => {
       try {
