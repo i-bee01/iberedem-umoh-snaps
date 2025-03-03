@@ -1,20 +1,23 @@
 import axios from "axios";
 
-const api_url = "https://unit-3-project-c5faaab51857.herokuapp.com";
-const api_key = "fa357145-13ad-44a6-a344-6e999901551d";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+console.log(backendUrl);
 
 const fetchTags = async () => {
   try {
-    const response = await axios.get(`${api_url}/tags?api_key=${api_key}`);
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    const response = await axios.get(`${backendUrl}/tags`);
     return response.data;
   } catch (error) {
     console.error("Unable to retrieve filters", error);
   }
+
 };
 
 const fetchPhotos = async () => {
   try {
-    const response = await axios.get(`${api_url}/photos?api_key=${api_key}`);
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    const response = await axios.get(`${backendUrl}/photos`);
     return response.data;
   } catch (error) {
     console.error("Unable to retrieve pictures", error);
@@ -23,8 +26,9 @@ const fetchPhotos = async () => {
 
 const fetchPhotoById = async (id) => {
   try {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const response = await axios.get(
-      `${api_url}/photos/${id}?api_key=${api_key}`
+      `${backendUrl}/photos/${id}`
     );
     return response.data;
   } catch (error) {
@@ -34,8 +38,9 @@ const fetchPhotoById = async (id) => {
 
 const fetchComments = async (id) => {
   try {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const response = await axios.get(
-      `${api_url}/photos/${id}/comments?api_key=${api_key}`
+      `${backendUrl}/photos/${id}/comments`
     );
     return response.data;
   } catch (error) {
@@ -45,8 +50,9 @@ const fetchComments = async (id) => {
 
 const postComment = async (id, comment) => {
   try {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const response = await axios.post(
-      `${api_url}/photos/${id}/comments?api_key=${api_key}`,
+      `${backendUrl}/photos/${id}/comments`,
       { name: comment.name, comment: comment.comment }
     );
     return response.data;

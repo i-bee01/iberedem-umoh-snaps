@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Gallery = ({ selectedFilters, isFilterOpen, photos }) => {
   let filteredPhotos = photos;
+  console.log(filteredPhotos);
 
   if (selectedFilters.size > 0) {
     filteredPhotos = photos.filter((photo) =>
@@ -13,7 +14,7 @@ const Gallery = ({ selectedFilters, isFilterOpen, photos }) => {
 
   return (
     <div className={`gallery ${isFilterOpen ? "gallery--filtered" : ""}`}>
-      {filteredPhotos.map((photo, index) => (
+      {filteredPhotos.map((photo) => (
         <Link
           className={`gallery__photo-link ${
             isFilterOpen ? "gallery__photo-link--filtered" : ""
@@ -21,7 +22,7 @@ const Gallery = ({ selectedFilters, isFilterOpen, photos }) => {
           to={`/photos/${photo.id}`}
           key={photo.id}
         >
-          <Photograph key={index} photo={photo} />
+          <Photograph photo={photo} />
         </Link>
       ))}
     </div>
