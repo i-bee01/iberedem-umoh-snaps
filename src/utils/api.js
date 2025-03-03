@@ -1,12 +1,13 @@
 import axios from "axios";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
-console.log(backendUrl);
+const port = import.meta.env.VITE_PORT;
+const apiUrl = `${backendUrl}:${port}`;
 
 const fetchTags = async () => {
   try {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL;
-    const response = await axios.get(`${backendUrl}/tags`);
+    
+    const response = await axios.get(`${apiUrl}/tags`);
     return response.data;
   } catch (error) {
     console.error("Unable to retrieve filters", error);
@@ -16,8 +17,9 @@ const fetchTags = async () => {
 
 const fetchPhotos = async () => {
   try {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL;
-    const response = await axios.get(`${backendUrl}/photos`);
+    const response = await axios.get(`${apiUrl}/photos`);
+    console.log("api photoData");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error("Unable to retrieve pictures", error);
@@ -26,9 +28,9 @@ const fetchPhotos = async () => {
 
 const fetchPhotoById = async (id) => {
   try {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    
     const response = await axios.get(
-      `${backendUrl}/photos/${id}`
+      `${apiUrl}/photos/${id}`
     );
     return response.data;
   } catch (error) {
@@ -38,9 +40,9 @@ const fetchPhotoById = async (id) => {
 
 const fetchComments = async (id) => {
   try {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    
     const response = await axios.get(
-      `${backendUrl}/photos/${id}/comments`
+      `${apiUrl}/photos/${id}/comments`
     );
     return response.data;
   } catch (error) {
@@ -50,9 +52,9 @@ const fetchComments = async (id) => {
 
 const postComment = async (id, comment) => {
   try {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    
     const response = await axios.post(
-      `${backendUrl}/photos/${id}/comments`,
+      `${apiUrl}/photos/${id}/comments`,
       { name: comment.name, comment: comment.comment }
     );
     return response.data;
